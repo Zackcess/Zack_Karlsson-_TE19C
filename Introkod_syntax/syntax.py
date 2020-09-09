@@ -1,5 +1,5 @@
 print("Hej Zack")
-
+int(input("How old are you"))
 #skapar en variabel och tilldelar det värdet "hund"
 
 name = "Zack"
