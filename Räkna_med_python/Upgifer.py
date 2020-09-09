@@ -12,9 +12,10 @@ print(f"{Celsius}={Kelvin}")
 
 #Västtrafik
 Gånger= float(input("Hur många gånger åker du med västtrafik?"))
-Kostnad = Gånger*30
-if Kostnad > 775:
-    print(Kostnad,"Köp ett månadskort")
+Kostnad = Gånger*301
 print(f"{Kostnad}kr kostar dina resor")
+if Kostnad > 775: print("Köp ett månadskort")
+if Kostnad < 775: print("Köp inte ett månadskort")
+
 
 
