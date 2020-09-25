@@ -17,3 +17,4 @@ if radie > 0:
     omkrets = 2*radie * 3.14
 print("cirkelns area är", area, "cm")
 print("cirkelns omkrets är", omkrets, "cm")
+
