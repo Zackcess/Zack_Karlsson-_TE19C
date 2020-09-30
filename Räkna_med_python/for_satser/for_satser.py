@@ -73,6 +73,9 @@ for i in range(b,e):
     print(i)
 
 #c
-for t in range (11):
-    for m in range(11):
-        print("{:0d}*{:0d}={:0d}".format(t,m,t*m), end="\t")
+for i in range(1,11):
+    for j in range(1,11):
+        print (f"{i*j}", end= "\t")
+    print("\n")
+
+#6

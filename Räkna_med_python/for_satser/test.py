@@ -1,3 +1,4 @@
-for t in range (11):
-    for m in range(11):
-        print("{:0d}*{:0d}={:0d}".format(t,m,t*m), end="\t")
+for i in range (1,100)
+    i
+s=2**0 + 2**-100 + 2**-100000 
+print(s)
