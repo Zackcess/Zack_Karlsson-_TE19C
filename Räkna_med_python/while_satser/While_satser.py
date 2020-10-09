@@ -22,6 +22,16 @@ while n<10:
     n = n+1
 print(f"talet är={s}")
 
+#4 skriv ett program som skriver ut värdena på f(x) = x**2 - 3x för -2<=x<= -2 med intervall 0.1. 
+# Med while
+
+x = -2
+y = 0
+while x >= -2 and x<=2:
+    y+=(x**2 - 3*x)
+    x=x+0.1
+    print(f"y={round(y,1)}") 
+
 #5
 import random as rnd
 s=rnd.randint (0,100)
@@ -35,3 +45,4 @@ while h != s:
         print("För högt")
     else:
         print("Rätt svar")
+
