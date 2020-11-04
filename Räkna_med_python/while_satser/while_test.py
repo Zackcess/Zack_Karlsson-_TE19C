@@ -52,7 +52,7 @@ while h != s:
 # Mjölk surnar när vi har mer än 10 000 000st. 
 # Hur många timmar tar det tills mjölken surnar?
 import matplotlib.pyplot as plt
-import nympy as np
+import numpy as np
 
 bakterier = 1.5e6
 surt = 1e7
@@ -79,13 +79,42 @@ plt.xlabel("timmar (h)")
 plt.ylabel("antal bakterier")
 plt.title("Bakterietillväxt i mjölk i rumstemp")
 plt.show()
+
+
 '''
 #4 skriv ett program som skriver ut värdena på f(x) = x**2 - 3x för -2<=x<= -2 med intervall 0.1. 
 # Med while
-
+'''
 x = -2
 y = 0
 while x >= -2 and x<=2:
     y+=(x**2 - 3*x)
     x=x+0.1
     print(f"y={round(y,1)}") 
+'''
+'''
+import matplotlib.pyplot as plt
+import numpy as np
+
+m=[0,10,20,30,40,50,60,70,80,90,100]#antal meter
+t=[0,1.83,2.87,3.78,4.65,5.5,6.32,7.14,7.96,8.79,9.69]#mätvärden tid
+
+plt.plot(t,m,"*-")
+plt.xlabel("tid (s)")
+plt.ylabel("sträcka (m)")
+plt.title("S/t")
+plt.show()
+'''
+'''
+#vt
+import matplotlib.pyplot as plt
+import numpy as np
+
+m=[0,10,20,30,40,50,60,70,80,90,100]#antal meter
+t=[0,1.83,2.87,3.78,4.65,5.5,6.32,7.14,7.96,8.79,9.69]#mätvärden tid
+v=[]#tomlista
+
+for i in range(1, len(m)):
+    v.append((m[i]-m[i-1])/(t[i]-t[i-1]))
+print(v)
+'''
