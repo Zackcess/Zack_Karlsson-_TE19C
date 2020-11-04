@@ -81,12 +81,19 @@ start=int(input("Startnummer= "))
 slut=int(input("Slutnummer= "))
 bi=int(input("Ange siffra i intervallet= "))
 b=int(input("Och en till siffra= "))
+burrcount=0
+birrcount=0
 for i in range (start,slut):
     if i%b == 0 and i%bi ==0:
         print("Burr, Birr")
+        burrcount +=1
+        birrcount +=1
     elif i%b == 0:
         print("Burr")
+        burrcount +=1
     elif i%bi ==0:
         print("Birr")
+        birrcount +=1
     else:
         print(i)
+print(f"Antalet burr: {burrcount} och antalet birr: {birrcount}")
