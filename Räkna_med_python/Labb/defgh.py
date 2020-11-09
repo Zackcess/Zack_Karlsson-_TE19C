@@ -18,7 +18,7 @@ for i in range(100000): #Så att det blir stimulation av flera punkter
         h+=1    
 print(f"{h/100000} procent är innanför")
 #f 
-print(f"{(h/100000)*4}")#Förhållandet mellan kvadraten och cirkeln. 
+print(f"{(h/100000)*4}")#Förhållandet mellan kvadraten och cirkeln. blir pi.
 
 #g
 import matplotlib.pyplot as plt#Gör så att graf-fungerar
