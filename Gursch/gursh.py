@@ -23,3 +23,10 @@ for k in range (4):
 rnd.shuffle(deck)
 for m in range(52):
     print(deck[m]) 
+
+spelare_1=[]
+for z in range(5):   
+    spelare_1.append(deck.pop())
+
+
+print(spelare_1, end=" ")
