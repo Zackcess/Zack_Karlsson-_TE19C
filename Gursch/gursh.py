@@ -15,7 +15,7 @@ for j in range (4):
 
 for k in range (4):
     for l in range(13):
-        card= cardfaces[l],"of", färger[k]
+        card= cardfaces[l],"av", färger[k]
         deck.append(card)
 
 
