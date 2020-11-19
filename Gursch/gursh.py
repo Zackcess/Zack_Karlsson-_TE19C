@@ -25,8 +25,11 @@ for m in range(52):
     print(deck[m]) 
 
 spelare_1=[]
+spelare_2=[]
 for z in range(5):   
     spelare_1.append(deck.pop())
+    spelare_2.append(deck.pop())
 
+print("spelare 1", spelare_1, end=" ")
+print("Spelare 2", spelare_2, end=" ")
 
-print(spelare_1, end=" ")
