@@ -16,6 +16,7 @@ def räkna_ord(text):
 
 citat="I stand on the shoulders of giants"
 print(f"antal ord i citatet: {räkna_ord(citat)}")
+
 import numpy as np
 import math 
 import matplotlib.pyplot as plt
