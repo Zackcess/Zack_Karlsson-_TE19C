@@ -73,20 +73,20 @@ for t in range(1,1000):
         femmor+=1
 print(f"Antal femmor är: {femmor}")
 print(f"Andelen femmor är:{(femmor/1000)*100}% ")
+
 '''
-#8
+#8 Hade inte löst den utan facit
+def växla(summa):
+    kontanter = [1000, 500, 200, 100, 50, 20, 10, 5, 1]
+    sedlar = ["Tusenlappar", "Femhundralappar", "Tvåhundralappar", "Femtiolappar", "Tjugolappar", "Tiokronor", "Femkronor", "Enkronor"]
 
-cash=int(input("Ange en summa pengar: "))
-def pengar(cash):
-    tusenlappar=0
-    tvåhundralappar=0
-    while cash>1000:
-        cash-=1000
-        tusenlappar+=1
-    if cash%200==0:
-        cash-=200
-        tvåhundralappar+=1
+    for i in range(len(kontanter)):
+        antal = summa//kontanter[i]
+        summa %= kontanter[i]
+        print(f"{antal} {sedlar[i]}", end=", ")
 
-    return tusenlappar, tvåhundralappar
-print(pengar(cash))
-#modulus och 
+växla(2333)
+
+
+
+
