@@ -74,7 +74,7 @@ for t in range(1,1000):
 print(f"Antal femmor är: {femmor}")
 print(f"Andelen femmor är:{(femmor/1000)*100}% ")
 
-'''
+
 #8 Hade inte löst den utan facit
 def växla(summa):
     kontanter = [1000, 500, 200, 100, 50, 20, 10, 5, 1]
@@ -89,4 +89,82 @@ växla(2333)
 
 
 
+#10
+import random as rnd
 
+def skapaKortlek():
+    kortnummer=[i for i in range(2,11)]
+    klättkort=["J", "Q", "K", "A"]
+    kortnummer+=klättkort
+    lek=kortnummer*4
+
+    blandaKortlek(lek)
+    return lek
+
+Kast=[]
+import random as rnd
+for i in range(10):
+    y=rnd.randint(1,6)
+    Kast.append(y) 
+    list.sort(Kast)
+print(Kast)
+
+Kast=[]
+import random as rnd
+for i in range(10):
+    y=rnd.randint(1,6)
+    Kast.append(y) 
+    list.sort(Kast)
+    list.reverse(Kast)
+print(Kast)
+
+import matplotlib.pyplot as plt
+x = [i for i in range(-10,11)]
+y= [i**2 for i in range(-10,11)]
+plt.plot(x,y)
+plt.show()
+'''
+'''
+#3 
+bräde=[[i for i in range (9)],['A','B', 'C', 'D', 'E', 'F', 'G', 'H']]
+for x in bräde[0]:
+    for y in bräde[1]:
+        print(y+str(x), end=" ")
+
+#4
+s=0
+n = int(input("Skriv i n?"))
+a1 = int(input("Skriv i a1?"))
+an = int(input("Skriv i an?"))
+def artimetisk_summa(n,a1,an):
+    s=(n*(a1+an))/2
+    return s
+print(f"{artimetisk_summa(n,a1,an)}")
+
+#1 
+tal = int(input("Skriv ett tal och du får veta om det är+-: "))
+if tal <0:
+    print('Det är negativt')
+elif tal>0:
+    print('Det är poistivt')
+else:
+    print('Det är noll')
+
+belopp=int(input("Mata in ett tal och få reda dess absolutbelopp: "))
+if belopp <0:
+    x=-belopp
+    print(f"|{x}|")
+elif belopp>0:
+    print(f"|{belopp}|")
+'''
+import math
+#10
+a=1
+b=3
+c=1
+p=b/a
+q=c
+x1=((-p)/2) + math.sqrt((p/2)**2 - q)
+x2=((-p)/2) - math.sqrt((p/2)**2 - q)
+
+print(f"x1={x1} x2={x2}")
