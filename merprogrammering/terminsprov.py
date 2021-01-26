@@ -156,7 +156,7 @@ if belopp <0:
     print(f"|{x}|")
 elif belopp>0:
     print(f"|{belopp}|")
-'''
+
 import math
 #10
 a=1
@@ -168,3 +168,33 @@ x1=((-p)/2) + math.sqrt((p/2)**2 - q)
 x2=((-p)/2) - math.sqrt((p/2)**2 - q)
 
 print(f"x1={x1} x2={x2}")
+
+def växla(summa):
+    sedlar = [1000, 500, 200, 100, 50,20,10,5,1]
+    pengar=['Tusenlappar', 'Femhundralappar', 'Tvåhundralappar', 'Tvåhundralappar', 'Hundralappar','Femtiolappar', 'Tjugolappar', 'Tior', 'Femkronor', 'Enkronor']
+    for i in range (len(sedlar)):
+        antal=summa//sedlar[i]
+        summa %= sedlar[i] 
+        print(f"{antal} {pengar[i]}", end=" ")
+växla(2222)
+
+s=0
+n=0
+while s<=99:
+    s+=1
+    n+=s
+print(n)
+
+s=0
+n=0
+while s<99:
+    s+=1
+    n+=s
+print(n)
+'''
+
+s=0
+n=1
+while n>=0:
+    s=(1/(2**n))
+print(s)
