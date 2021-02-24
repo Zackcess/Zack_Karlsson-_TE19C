@@ -126,7 +126,7 @@ def nummer(n,s):
     total += i
   return total
 print(f"Totalen blir:{nummer(n,s)}")
-'''
+
 
 summa=int(input("Ange en summa du vill ha i sedlar: "))
 def sedlar(summa):
@@ -143,7 +143,7 @@ def sedlar(summa):
         Tusenlappar+=1
         summa-=1000  
     return Tusenlappar
-'''
+
     elif summa%200:
         Tvåhundralappar+=1
         summa-=200
@@ -167,7 +167,8 @@ def sedlar(summa):
     elif summa%1:
         Enkronor+=1
         summa-=1
-'''       
+       
 
 print(f"Antal Tusenlappar: {sedlar(summa)}")
 
+'''

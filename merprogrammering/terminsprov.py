@@ -44,10 +44,11 @@ def räkna_ord(mening):
 
 print(f"antal ord i mening: {räkna_ord(mening)}")
 
+
 #6 Den ska visa om det är rätt eller fel och hur långt ifrån det är.
 import random as rnd
 spela=True
-svar=i*num
+
 while spela:
     num=int(input("Skriv in en gångertabell du vill träna: "))
     for i in range (1,11):
@@ -124,13 +125,13 @@ y= [i**2 for i in range(-10,11)]
 plt.plot(x,y)
 plt.show()
 '''
-'''
+
 #3 
 bräde=[[i for i in range (9)],['A','B', 'C', 'D', 'E', 'F', 'G', 'H']]
 for x in bräde[0]:
     for y in bräde[1]:
         print(y+str(x), end=" ")
-
+'''
 #4
 s=0
 n = int(input("Skriv i n?"))
@@ -191,10 +192,41 @@ while s<99:
     s+=1
     n+=s
 print(n)
-'''
 
+x=-2
+y=0
+while -2<=x and x<=2:
+    y+=(x**2)-3*x
+    x+=0.1
+    print(f"{round(y,2)}")
+
+
+s=0  #variabl ska funkar som räknarvariabel
+n = 0
+while n<1000:
+    s += 2**(-n)
+    n = n+1
+print(f"talet är={s}")
+
+import random as rnd
 s=0
-n=1
-while n>=0:
-    s=(1/(2**n))
-print(s)
+tal=0
+rätt=rnd.randint(0,100)
+while tal !=rätt:
+    tal=int(input("Gissa ett tal mellan 0-100: "))
+    if tal < rätt:
+        print("Nära skjuter ingen hare. För lågt")
+    elif tal > rätt:
+        print("För stort")
+    else:
+        print("Rätt svar en guld")
+
+from math import factorial 
+n = int(input("Välj ditt n: "))
+for i in range(n):
+    for j in range(n-i+2):
+        print(end=" ")
+    for j in range(i + 1):
+        print(factorial(i)//(factorial(j)*factorial(i-j)), end=" ")
+    print()
+'''
