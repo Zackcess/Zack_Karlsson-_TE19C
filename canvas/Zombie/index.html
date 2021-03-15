@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="https://koda.nu/simple.js">
+        fill("green");
+        rectangle(5, 5, totalWidth-10, totalHeight-10,"black");
+          rectangle(20, 20, totalWidth-40, totalHeight-40,"green");
+        rectangle(40, 40, totalWidth-80, totalHeight-80,"black");
+          rectangle(250, 20, 10, 20,"black");
+        rectangle(60, 60, totalWidth-120, totalHeight-120,"green");
+         rectangle(80, 80, totalWidth-160, totalHeight-160,"black");
+        var player = {x:10, y:10, size:5, xSpeed:5, ySpeed: 0};
+    
+        function update()
+        {
+            with(player)
+            {
+    
+    
+    
+            rectangle(x, y, size, size, "green");
+    
+            x += xSpeed;
+            y += ySpeed;
+              if (keyboard.w)
+            {
+                ySpeed = -5;
+                xSpeed = 0;
+    
+            }
+              if (keyboard.s)
+            {
+                ySpeed = 5;
+                xSpeed = 0;
+    
+    
+            }
+              if (keyboard.d)
+            {
+                ySpeed = 0;
+                xSpeed = 5;
+    
+    
+            }
+              if (keyboard.a)
+            {
+                ySpeed = 0;
+                xSpeed = -5;
+    
+    
+            }
+    
+    
+    
+    
+              if (getPixel(x, y).green != 0)
+                {
+                    stopUpdate();
+                    alert("du förlorade");
+    
+                }
+    
+    
+            }
+    
+        }
+    </script>
+</body>
+</html>

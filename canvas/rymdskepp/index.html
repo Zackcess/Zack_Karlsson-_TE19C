@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="https://koda.nu/simple.js">
+        var cat= {x: 100, y:100, speed: 5};
+        hideMouse();
+        playSound("http://spelprogrammering.nu/ljud/musik/Auf_Wiedersehen_Monty_01"), 0.5;
+        function update()
+        {
+          fill("black");
+
+          picture(mouse.x, mouse.y, "http://spelprogrammering.nu/bilder/xwing.png");
+          picture(cat.x, cat.y, "http://spelprogrammering.nu/bilder/tie.png");
+
+          
+          circle(500,100,100, "red");
+          if (keyboard.d)
+            cat.x +=cat.speed;
+          if (keyboard.a)
+            cat.x-=cat.speed;
+          if (keyboard.w)
+            cat.y-=cat.speed;
+          if(keyboard.s)
+            cat.y+=cat.speed;
+          
+          var d =distance(mouse, cat);
+            if (d<40){
+              text(50,50, 20, "Game over!", "green");
+              showMouse;
+              playSound("")
+              stopSound("http://spelprogrammering.nu/ljud/musik/Auf_Wiedersehen_Monty_01");
+              stopUpdate();
+            }
+            var d_maze = distance(mouse.x, mouse.y, 500,100);
+            if(d_maze<100){
+                stopUpdate();
+                text(50,50, 20, "Game over!, don't crash into Mars fool", "green")
+            }
+        }
+      </script>
+</body>
+</html>
