@@ -43,31 +43,39 @@ with open("Provresultat.txt", "r") as f1:
         lst.append(rad)
     lst.sort()
     print(*lst, sep='\n',end="\n")
-
-#3 funkar inte för svår
+'''
+#3 funkar inte för svår, löste den:wink:
 ma2a=[]
 ma2c=[]
 betyglista=[]
+bokstavslista=[]
 import matplotlib.pyplot as plt
 import numpy as np
 with open("NPvt19Ma2A.txt", "r") as f1, open("NPvt19Ma2C.txt", "r") as f2:
     for rad in f1:
         rad=rad.replace("%", " ")
-        ma2a.append(rad)
-    for i in range(6):
-        betyglista= ma2a[i][1:6]
-        print(betyglista)
-    colors = ['gold', 'yellowgreen', 'lightcoral', 'lightskyblue']
-    
-    plt.pie(betyglista, colors=colors)
-    plt.axis('equal')
-    plt.show()
+        bokstav=rad[0]
+        betyg=rad[2:6]
+        betyglista.append(betyg)
+        bokstavslista.append(bokstav)
+print(bokstavslista)
+plt.pie(betyglista, labels=bokstavslista)
+plt.title("Ma2A")
+plt.show()
 
+betyglista2=[]
+bokstavslista2=[]
+with open("NPvt19Ma2C.txt", "r") as f2:
     for rad in f2:
         rad=rad.replace("%", " ")
-        ma2c.append(rad)
-    for i in range(6):
-        print(ma2c[i][1:6])
+        bokstav=rad[0]
+        betyg=rad[2:6]
+        betyglista2.append(betyg)
+        bokstavslista2.append(bokstav)
+print(bokstavslista2)
+plt.pie(betyglista2, labels=bokstavslista2)
+plt.title("Ma2C")
+plt.show()
 '''
 #4 Denna funkar mer, lite långkod dock 
 import random as rnd
@@ -112,3 +120,4 @@ while simulator_start < exponent:
     fil.write(f"\nVid {10**simulator_start} kast ar : \nAntal ettor = {antal_ettor}, sannolikhet {sannolikhet_ettor} \nAntal tvaor = {antal_tvåor} , sannolikhet {sannolikhet_tvåor} \nAntal treor = {antal_treor}, sannolikhet {sannolikhet_treor} \nAntal fyror = {antal_fyror}, sannolikhet {sannolikhet_fyror} \nAntal femmor = {antal_femmor}, sannolikhet {sannolikhet_femmor} \nAntal Sexor = {antal_sexor}, sannolikhet {sannolikhet_sexor}")
     fil.write(f"\n")
     # print(f"Vid {10**simulator_start} kast är : Antal ettor = {antal_ettor}, sannolikhet {sannolikhet_ettor} Antal tvåor = {antal_tvåor} , sannolikhet {sannolikhet_tvåor} Antal treor = {antal_treor}, sannolikhet {sannolikhet_treor} Antal fyror = {antal_fyror}, sannolikhet {sannolikhet_fyror} Antal femmor = {antal_femmor}, sannolikhet {sannolikhet_femmor} Antal Sexor = {antal_sexor}, sannolikhet {sannolikhet_sexor}")
+'''
