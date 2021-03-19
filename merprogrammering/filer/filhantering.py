@@ -45,8 +45,6 @@ with open("Provresultat.txt", "r") as f1:
     print(*lst, sep='\n',end="\n")
 '''
 #3 funkar inte för svår, löste den:wink:
-ma2a=[]
-ma2c=[]
 betyglista=[]
 bokstavslista=[]
 import matplotlib.pyplot as plt
