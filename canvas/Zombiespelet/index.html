@@ -1,7 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zombiespel</title>
+</head>
+<body>
 <script src="http://spelprogrammering.nu/simple.js">
-    var zombie={x: random(totalWidth), y:(totalHeight), speed:random(1,5)};
-    function update(){
-        clearScreen();
-        picture(zombie.x, zombie.y)
+    var zombies=[]; //Gör lista för zombies
+    var i = 0; //Intierar i som noll
+    while (i < 10){//Genererar zombies med dessa egenskaper
+        zombies.push({x: random(totalWidth), y: random(totalHeight), speed: random(1,5)});
+        i+=1
     }
+    function update(){
+        clearScreen();//rensar skärmen
+        fill("green");//bordern
+        rectangle(20,20, totalWidth-40, totalHeight-40, "black");//Gör bakgrunden
+        var i = 0;
+        while(i<10){
+            var zombie = zombies[i];//slänger in zombisen
+            picture(mouse.x-65,mouse.y-150, "Steve.png");//grafik gjord i photoshop 
+            picture(zombie.x, zombie.y, "Minecraft zombie2.png");//Grafik gjord i photoshop
+            hideMouse();//gömmer musen
+            if (zombie.x<mouse.x)//kontrolerar så att rör sig mot spelaren horizonteltt 
+                zombie.x += zombie.speed;
+            else//kontrolerar så att rör sig mot spelaren horizonteltt 
+                zombie.x -= zombie.speed;
+            if (zombie.y<mouse.y)//kontrolerar så att rör sig mot spelaren vertikalt 
+                zombie.y += zombie.speed;
+            else//kontrolerar så att rör sig mot spelaren vertikalt 
+            zombie.y -= zombie.speed;
+            if (keyboard.e)//Uppdaterar sidan när man trycker e
+            {
+                location.reload();
+            }
+            if (keyboard.space){//ploppar upp blå text
+                text(100, 100,40,"Victory", "blue");
+            }
+            if (keyboard.r){//kommer till menyn
+                window.open("menu.html", "menu.html");
+            }
+            if (getPixel(mouse.x, mouse.y).blue != 0)//Gör så att man vinner när man kommer till victory texten
+                {
+                    stopUpdate();//slutar uppdatera så att spelet slutar
+                    text(540,50,30,"Du Vann", "white");
+                    showMouse();
+    
+                }
+            if (getPixel(mouse.x, mouse.y).green != 0)//Gör så att man dör när man är nära bordern
+                {
+                    stopUpdate();
+                    text(540,50,30,"Game over", "red");//text
+                    showMouse();
+    
+                }
+            if (distance(mouse, zombie) < 8)//gör så att man dör nära zombies
+                {
+                    text(540,50,40,"Game over", "red");
+                    showMouse();//visar musen
+                    stopUpdate();
+                }
+            
+            i +=1;
+            
+           
+        }   
+        
+    }
+
+        
 </script>
+</body>
+</html>

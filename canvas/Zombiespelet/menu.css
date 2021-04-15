@@ -1,0 +1,29 @@
+*{
+    margin: 0px; /* Ändrar standard värdena så inget plötsligt kan hända sedan*/
+    padding: 0px;
+    border: 0px;
+    font-family: 'Poppins';
+    overflow-x: hidden; /*Gömmer x-axeln*/
+    text-decoration: none;
+    font-style: none;
+    
+}
+body{
+    background: url("Background.png");
+    background-size: auto;
+}
+.navbar{
+    display: flex;/*Flexboxar menyn*/
+    align-items:center;
+    justify-content: space-around;
+    top: 100px;
+    width: 100%;
+}
+
+.container{
+    flex-grow:2%; 
+    font-size: 100px;
+    color:white;
+    background-color: grey; 
+}
+

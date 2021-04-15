@@ -8,6 +8,7 @@ Vad jag måste få med:
 
 - Menu 
 
+- Zombie ljud, minecraft
 
 
 - Main funktion 
